@@ -277,7 +277,7 @@
       systems = systems';
     }
     // (
-      grow {
+      growOn {
         inputs = inputs';
         # as-nix-cli-epiphyte = false;
         cellsFrom = ./cells;
@@ -294,5 +294,5 @@
           }
         ];
       }
-    );
+    ) ({ __functor = _: _: "hi"; });
 }
