@@ -102,7 +102,9 @@ in
     in
       nixpkgs.stdenv.mkDerivation {
         name = "std";
+        version = "0.1";
         meta.description = "nix shortcut for projects that conform to Standard";
+        meta.platforms = [ "x86_64-linux" "x86_64-darwin" ];
         src = ./.;
         dontInstall = true;
         nativeBuildInputs = [ nixpkgs.chicken ];

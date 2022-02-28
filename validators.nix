@@ -13,9 +13,6 @@ let
   );
 in
 {
-  Systems =
-    with yants "std" "grow" "attrs";
-    list (enum "system" nixpkgs.lib.systems.doubles.all);
   Cell = cellsFrom: organelles: cell: type: let
     path = o: organellePath cellsFrom cell o;
     atLeastOneOrganelle = builtins.any (x: x) (
